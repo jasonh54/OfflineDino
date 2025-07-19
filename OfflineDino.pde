@@ -1,5 +1,7 @@
 PImage bird, cactus, dino, ground;
 
+Dino dino1 = new Dino();
+
 public void setup(){
   size(800,400);
   
