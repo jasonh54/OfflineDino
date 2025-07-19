@@ -1,5 +1,9 @@
 PImage bird, cactus, dino, ground;
+
 ArrayList <GameObject> go;
+
+Dino dino1 = new Dino();
+
 public void setup(){
   size(800,400);
   
