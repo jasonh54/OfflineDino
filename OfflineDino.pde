@@ -2,7 +2,7 @@ PImage bird, cactus, dino, ground;
 
 ArrayList <GameObject> go;
 
-Dino dino1 = new Dino();
+Dino dino1;
 
 public void setup(){
   size(800,400);
@@ -12,7 +12,7 @@ public void setup(){
    dino = loadImage("images/dino1.png");
    ground = loadImage("images/ground.png");
    go = new ArrayList<GameObject>();
-  
+   dino1 = new Dino();
 }
 
 public void draw(){
