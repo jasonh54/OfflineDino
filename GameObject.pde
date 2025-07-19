@@ -2,6 +2,7 @@ class GameObject{
   PImage p;
   float x,y,w,h;
   public GameObject(PImage p, float x, float y, float w, float h){
+    go.add(this);
     this.p = p;
     this.x = x;
     this.y = y;
