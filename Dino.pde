@@ -19,7 +19,7 @@ class Dino extends GameObject{
         this.gravity = -10;
       }
       
-      if(downKey == true){
+      if(downKey == true && this.y < 300){
         this.gravity += 1;
       }
   }

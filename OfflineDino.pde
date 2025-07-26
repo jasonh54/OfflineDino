@@ -37,20 +37,20 @@ public void draw(){
 }
 
 public void keyPressed(){
-  if(key == 32){
+  if(keyCode == 32){
     spaceKey = true;
   }
   
-  if(key == 40){
+  if(keyCode == 40){
     downKey = true;
   }
 }
 
 public void keyReleased(){
-  if(key == 32){
+  if(keyCode == 32){
     spaceKey = false;
   }
-  if(key == 40){
+  if(keyCode == 40){
     downKey = false;
   }
 }
