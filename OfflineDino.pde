@@ -9,7 +9,7 @@ Cactus c;
 
 Ground ground1;
 Spawner s;
-
+Birds b;
 public void setup(){
   size(800,400);
   
@@ -24,6 +24,7 @@ public void setup(){
 
    ground1 = new Ground();
    s = new Spawner();
+   b = new Birds();
 }
 
 public void draw(){
@@ -33,5 +34,4 @@ public void draw(){
     go.get(i).move();
   }
   s.spawn();
-  
 }
