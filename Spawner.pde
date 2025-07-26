@@ -5,9 +5,16 @@ class Spawner{
   }
   public void spawn(){
     time++;
+    int r = (int)(Math.random()*10);
     if(time == 150){
-      c = new Cactus();
-      time = 0;
+      if(r > 5){
+        c = new Cactus();
+        time = 0;
+      }
+      else{
+        b = new Birds();
+        time = 0;
+      }
     }
   }
 }
