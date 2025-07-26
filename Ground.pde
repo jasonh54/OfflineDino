@@ -4,6 +4,6 @@ class Ground extends GameObject{
   }
   
   public void move(){
-    this.x -= 5;
+    this.x -= 2;
   }
 }

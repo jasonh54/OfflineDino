@@ -22,6 +22,13 @@ class Dino extends GameObject{
       if(downKey == true && this.y < 300){
         this.gravity += 1;
       }
+      
+      
+      for(int i=0;i<go.size();i++){
+        if(go.get(i).tag == "Cactus" && collision(this, go.get(i)) == true){
+          noLoop();
+        }
+      }
   }
   
   

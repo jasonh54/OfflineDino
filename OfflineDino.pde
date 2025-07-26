@@ -54,3 +54,12 @@ public void keyReleased(){
     downKey = false;
   }
 }
+
+public boolean collision(GameObject A, GameObject B){
+  if((abs(A.x - B.x) < (A.w/2) + (B.w/2)) && (abs(A.y - B.y) < (A.h/2) + (B.h/2))){
+    return true;
+  }
+  else{
+    return false;
+  }
+}
