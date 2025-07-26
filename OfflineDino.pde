@@ -5,11 +5,9 @@ ArrayList <GameObject> go;
 
 Dino dino1;
 
-Cactus c;
 
 Ground ground1;
 Spawner s;
-Birds b;
 public void setup(){
   size(800,400);
   
@@ -20,11 +18,11 @@ public void setup(){
    go = new ArrayList<GameObject>();
    dino1 = new Dino();
 
-   c = new Cactus();
+   
 
    ground1 = new Ground();
    s = new Spawner();
-   b = new Birds();
+   
 }
 
 public void draw(){
