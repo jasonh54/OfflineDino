@@ -1,8 +1,10 @@
 PImage bird, cactus, dino, ground;
+boolean spaceKey;
 
 ArrayList <GameObject> go;
 
 Dino dino1;
+Ground ground1;
 
 public void setup(){
   size(800,400);
@@ -13,10 +15,15 @@ public void setup(){
    ground = loadImage("images/ground.png");
    go = new ArrayList<GameObject>();
    dino1 = new Dino();
+   ground1 = new Ground();
 }
 
 public void draw(){
+  background(155);
   for(int i = 0; i < go.size(); i++){
     go.get(i).show();
+    go.get(i).move();
   }
+  
+  
 }
