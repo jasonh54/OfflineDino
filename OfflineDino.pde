@@ -1,4 +1,5 @@
 PImage bird, cactus, dino, ground;
+boolean spaceKey;
 
 ArrayList <GameObject> go;
 
@@ -18,6 +19,7 @@ public void setup(){
 }
 
 public void draw(){
+  background(155);
   for(int i = 0; i < go.size(); i++){
     go.get(i).show();
     go.get(i).move();
