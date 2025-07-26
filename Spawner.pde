@@ -8,11 +8,11 @@ class Spawner{
     int r = (int)(Math.random()*10);
     if(time == 150){
       if(r > 5){
-        c = new Cactus();
+        new Cactus();
         time = 0;
       }
       else{
-        b = new Birds();
+        new Birds();
         time = 0;
       }
     }
