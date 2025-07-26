@@ -12,7 +12,7 @@ class GameObject{
   public void show(){
     image(p, x-w/2, y-h/2);
   }
-  
+
   public void move(){
     
   }
