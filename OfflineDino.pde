@@ -1,5 +1,5 @@
 PImage bird, cactus, dino, ground;
-boolean spaceKey;
+boolean spaceKey, downKey;
 
 ArrayList <GameObject> go;
 
@@ -34,4 +34,23 @@ public void draw(){
   }
   
   
+}
+
+public void keyPressed(){
+  if(keyCode == 32){
+    spaceKey = true;
+  }
+  
+  if(keyCode == 40){
+    downKey = true;
+  }
+}
+
+public void keyReleased(){
+  if(keyCode == 32){
+    spaceKey = false;
+  }
+  if(keyCode == 40){
+    downKey = false;
+  }
 }

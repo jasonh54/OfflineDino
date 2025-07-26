@@ -1,4 +1,5 @@
 class Dino extends GameObject{
+
   private float gravity;
   
   public Dino(){
@@ -12,6 +13,14 @@ class Dino extends GameObject{
       
       if(this.y > 300){
         this.gravity = 0;
+      }
+      
+      if(spaceKey == true && this.y > 300){
+        this.gravity = -10;
+      }
+      
+      if(downKey == true && this.y < 300){
+        this.gravity += 1;
       }
   }
   
