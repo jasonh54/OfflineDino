@@ -13,6 +13,8 @@ class GameObject{
   }
   public void show(){
     image(p, x-w/2, y-h/2);
+    //fill(255,0,0);
+    //rect(x-w/2, y-h/2,w,h);
   }
 
   public void move(){

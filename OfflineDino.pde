@@ -34,7 +34,7 @@ public void draw(){
     go.get(i).move();
   }
   s.spawn();
-  
+  text("hello",50,50);
 }
 
 public void keyPressed(){

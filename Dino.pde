@@ -3,7 +3,7 @@ class Dino extends GameObject{
   private float gravity;
   
   public Dino(){
-    super(dino, 50 ,300, 50,50);
+    super(dino, 50 ,290, 40,40);
     this.gravity = 0;
   }
   
@@ -13,15 +13,17 @@ class Dino extends GameObject{
       
       if(this.y > 300){
         this.gravity = 0;
+        this.y-=1;
       }
       
-      if(spaceKey == true && this.y > 300){
+      if(spaceKey == true && this.y >= 299){
         this.gravity = -10;
       }
       
       if(downKey == true && this.y < 300){
         this.gravity += 1;
       }
+      
       
       
       for(int i=0;i<go.size();i++){
