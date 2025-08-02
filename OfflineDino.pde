@@ -1,5 +1,7 @@
 PImage bird, cactus, dino, ground;
 boolean spaceKey, downKey;
+float speed;
+float timer;
 
 ArrayList <GameObject> go;
 
@@ -9,6 +11,7 @@ Dino dino1;
 Ground ground1;
 Ground ground2;
 Spawner s;
+int score;
 public void setup(){
   size(800,400);
   
@@ -18,6 +21,8 @@ public void setup(){
    ground = loadImage("images/ground.png");
    go = new ArrayList<GameObject>();
    dino1 = new Dino();
+   
+   speed = 2;
 
    
 
@@ -25,6 +30,7 @@ public void setup(){
    ground2 = new Ground();
    s = new Spawner();
    ground2.x = 1054;
+   score = 0;
 }
 
 public void draw(){
@@ -32,9 +38,14 @@ public void draw(){
   for(int i = 0; i < go.size(); i++){
     go.get(i).show();
     go.get(i).move();
+    
   }
+  score++;
   s.spawn();
-  text("hello",50,50);
+
+  textSize(30);
+  text("score:" + score, 50,50);
+
 }
 
 public void keyPressed(){
@@ -62,5 +73,14 @@ public boolean collision(GameObject A, GameObject B){
   }
   else{
     return false;
+  }
+}
+
+public void speedUp(){
+  timer++;
+  
+  if(timer > 100){
+    speed+=0.25;
+    timer = 0;
   }
 }

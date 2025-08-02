@@ -4,9 +4,11 @@ class Birds extends GameObject{
     tag = "Bird";
   }
   public void move(){
-    x-=2;
+    x-= speed ;
     
   }
+  
+  
   
   
 }
