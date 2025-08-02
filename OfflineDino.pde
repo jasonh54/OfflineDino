@@ -9,6 +9,7 @@ Dino dino1;
 Ground ground1;
 Ground ground2;
 Spawner s;
+int score;
 public void setup(){
   size(800,400);
   
@@ -25,6 +26,7 @@ public void setup(){
    ground2 = new Ground();
    s = new Spawner();
    ground2.x = 1054;
+   score = 0;
 }
 
 public void draw(){
@@ -32,9 +34,12 @@ public void draw(){
   for(int i = 0; i < go.size(); i++){
     go.get(i).show();
     go.get(i).move();
+    
   }
+  score++;
   s.spawn();
-  
+  textSize(30);
+  text("score:" + score, 50,50);
 }
 
 public void keyPressed(){
