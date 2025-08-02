@@ -4,7 +4,7 @@ class Ground extends GameObject{
   }
   
   public void move(){
-    this.x -= 2;
+    this.x -= speed;
     if(this.x < -1054){
       this.x = 1054;
     }
