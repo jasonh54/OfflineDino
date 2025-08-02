@@ -7,6 +7,7 @@ Dino dino1;
 
 
 Ground ground1;
+Ground ground2;
 Spawner s;
 public void setup(){
   size(800,400);
@@ -21,8 +22,9 @@ public void setup(){
    
 
    ground1 = new Ground();
+   ground2 = new Ground();
    s = new Spawner();
-   
+   ground2.x = 1054;
 }
 
 public void draw(){
@@ -32,6 +34,7 @@ public void draw(){
     go.get(i).move();
   }
   s.spawn();
+  
 }
 
 public void keyPressed(){
