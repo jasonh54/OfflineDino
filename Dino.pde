@@ -28,7 +28,13 @@ class Dino extends GameObject{
         if(go.get(i).tag == "Cactus" && collision(this, go.get(i)) == true){
           noLoop();
         }
+        
+        if(go.get(i).tag == "Bird" && collision(this, go.get(i)) == true){
+          noLoop();
+        }
       }
+      
+
   }
   
   
