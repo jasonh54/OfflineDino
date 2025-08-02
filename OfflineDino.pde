@@ -1,5 +1,7 @@
 PImage bird, cactus, dino, ground;
 boolean spaceKey, downKey;
+float speed;
+float timer;
 
 ArrayList <GameObject> go;
 
@@ -18,6 +20,8 @@ public void setup(){
    ground = loadImage("images/ground.png");
    go = new ArrayList<GameObject>();
    dino1 = new Dino();
+   
+   speed = 2;
 
    
 
@@ -62,5 +66,14 @@ public boolean collision(GameObject A, GameObject B){
   }
   else{
     return false;
+  }
+}
+
+public void speedUp(){
+  timer++;
+  
+  if(timer > 100){
+    speed+=0.25;
+    timer = 0;
   }
 }
